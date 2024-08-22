@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Market pages</title>
+    <meta charset="UTF-8" />
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+      }
+      .content {
+        background-color: rgb(37, 32, 32);
+        padding: 10px;
+      }
+      nav ul {
+        list-style: none;
+        padding: 0;
+      }
+      nav ul li {
+        display: inline-block;
+        margin-right: 20px;
+      }
+      nav {
+        height: 100px;
+        border: 1 solid black;
+      }
+      nav > ul {
+        float: left;
+      }
+
+      h1 {
+        color: gold;
+      }
+      li {
+        display: block;
+      }
+      nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+      }
+      
+      img {
+        width: 100%;
+      }
+      #kuva2 {
+        width: 100px;
+        height: 100px;
+        background-color: white;
+        position: absolute;
+        bottom: 75%;
+        right: 25px;
+      }
+      .home {
+        float: left;
+        padding: 5px;
+        width: auto;
+        max-width: 700px;
+
+      }
+      .info {
+        position: relative;
+        background-image: url("kuva.jpg");
+        margin: 20px;
+        padding: 17px 26px 25px 23px;
+        width: 90%;
+        max-width: 700px;
+        height: auto;
+        margin: 20% auto;
+      }
+      .f-left {
+        float: left;
+      }
+      .m-left {
+        margin-right: 30px;
+        margin-bottom: 30px;
+      }
+      .ravintola-kuva {
+        width: 25%;
+      }
+      #lause {
+        background-color: none;
+        color: black;
+        font-size: larger;
+      }
+      #teksti{
+        font-size: small;
+      }
+      footer {
+        background-color: #650000;
+        padding: 20px;
+        text-align: center;
+        color: white;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+      }
+      p {
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="content">
+        <ul>
+          <li><h1>Lounari.</h1></li>
+          <li><a href="x">Etusivu</a></li>
+          <li><a href="x">Ruokalistat</a></li>
+          <li><a href="x">Yhteystiedot</a></li>
+        </ul>
+      </div>
+    </nav>
+    <main class="home">
+      <div>
+        <p>Tänne lisää sisältöä seuraavina vilkkoina</p>
+      </div>
+    </main>
+    <main class="info">
+      <div>
+        <div id="kuva2">
+            <img src="kuva2.jpg" alt="porkkana"/>
+          </div>
+        <p>
+          <img
+            class="f-left m-left ravintola-kuva"
+            src="kuva1.jpg"
+            alt="ravintola"
+          />
+          <span id="lause">Tämä on span</span>
+          <p>Tämä on p elementti</p><p id="teksti">Eius fugiat
+          laboriosam odio deserunt culpa, velit, amet repellat, soluta
+          perspiciatis nihil excepturi eligendi! Pariatur quidem molestias
+          maiores eum numquam. Recusandae, ipsam? Lorem, ipsum dolor sit amet
+          consectetur adipisicing elit. Sapiente molestiae quasi excepturi autem
+          dolorum eos. Atque labore cum, tempora soluta tempore, eaque
+          blanditiis error accusantium harum quisquam voluptatem nobis illum.</p>
+        </p> 
+      </div>
+    </main>
+  </body>
+  <footer>Copyright.Nihad</footer>
+</html>
