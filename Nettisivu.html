@@ -14,11 +14,12 @@
       }
       nav {
         background-color: black;
-        height: 50px;
-        padding: 10px;
+        height: 70px;
+        padding: 10px 25px;
       }
       nav ul {
         list-style: none;
+        margin: 10px;
       }
       nav ul li {
         display: inline-block;
@@ -49,16 +50,13 @@
         max-width: 900px;
       }
       .home {
-        font-size: larger;
+        font-size: large;
         width: auto;
-      }
-      h2 {
-        text-align: start;
       }
       .info {
         background-image: url("ruoka.jpg");
         position: relative;
-        float: right;
+        float: inline-start;
         width: 100%;
         height: 100%;
         margin: 20% auto;
@@ -71,6 +69,7 @@
         margin-right: 40px;
         margin-top: 10px;
       }
+
       p {
         color: black;
         margin-bottom: 10px;
@@ -85,7 +84,7 @@
       }
 
       footer {
-        background-color: #650000;
+        background-color: #970606;
         padding: 20px;
         text-align: center;
         color: white;
@@ -105,7 +104,10 @@
       </ul>
     </nav>
     <main class="home">
-      <h2>Tänne lisää sisältöä seuraavina vilkkoina</h2>
+      <div>
+        <p>Tänne lisää sisältöä seuraavina vilkkoina</p>
+      </div>
+
       <div class="info">
         <div id="porkkana_kuva">
           <img src="porkkana.png" alt="porkkana" />
@@ -115,7 +117,7 @@
           <span id="lause">Additional Information</span>
         </p>
 
-        <p id="teksti">This is a paragraph element.</p>
+        <p id="teksti">This is our story</p>
         <p>
           We strive to offer an exceptional experience with every visit. Whether
           you're here for a casual meal or a special occasion, our team is
