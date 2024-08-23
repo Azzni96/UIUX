@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <title>Market pages</title>
     <meta charset="UTF-8" />
@@ -40,37 +40,40 @@
         width: 150px;
         height: 100%;
         position: absolute;
-        bottom: 40%;
-        right: 30px;
+        bottom: 35%;
+        right: 0;
       }
-      .home,
-      .info {
-        margin: 20px auto;
+      .home {
+        margin: 40px auto 20px auto;
         padding: 20px;
         max-width: 900px;
       }
       .home {
         font-size: larger;
-        float: left;
         width: auto;
+      }
+      h2 {
+        text-align: start;
       }
       .info {
         background-image: url("ruoka.jpg");
         position: relative;
+        float: right;
         width: 100%;
         height: 100%;
         margin: 20% auto;
+        padding: 20px;
+        max-width: 900px;
       }
       .ravintola-kuva {
         float: left;
-        width: 20%;
+        width: 30%;
         margin-right: 40px;
         margin-top: 10px;
       }
       p {
         color: black;
         margin-bottom: 10px;
-        line-height: 1;
       }
       #lause {
         font-size: 40px;
@@ -102,12 +105,8 @@
       </ul>
     </nav>
     <main class="home">
-      <div>
-        <p>Tänne lisää sisältöä seuraavina vilkkoina</p>
-      </div>
-    </main>
-    <main class="info">
-      <div>
+      <h2>Tänne lisää sisältöä seuraavina vilkkoina</h2>
+      <div class="info">
         <div id="porkkana_kuva">
           <img src="porkkana.png" alt="porkkana" />
         </div>
@@ -127,6 +126,6 @@
         </p>
       </div>
     </main>
+    <footer>Copyright.Nihad</footer>
   </body>
-  <footer>Copyright.Nihad</footer>
 </html>
