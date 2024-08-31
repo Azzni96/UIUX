@@ -3,106 +3,97 @@
   <head>
     <title>Market pages</title>
     <meta charset="UTF-8" />
-    <style>
-      * {
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
-      }
-      body {
-        font-family: Arial, sans-serif;
-      }
-      nav {
-        background-color: black;
-        height: 70px;
-        padding: 10px 25px;
-      }
-      nav ul {
-        list-style: none;
-        margin: 10px;
-      }
-      nav ul li {
-        display: inline-block;
-        margin-right: 20px;
-      }
-      nav h1 {
-        color: gold;
-      }
-      nav ul li a {
-        color: white;
-        text-decoration: none;
-        font-weight: bold;
-      }
-
-      img {
-        width: 100%;
-      }
-      #porkkana_kuva {
-        width: 150px;
-        height: 100%;
-        position: absolute;
-        bottom: 35%;
-        right: 0;
-      }
-      .home {
-        margin: 40px auto 20px auto;
-        padding: 20px;
-        max-width: 900px;
-      }
-      .home {
-        font-size: large;
-        width: auto;
-      }
-      .info {
-        background-image: url("ruoka.jpg");
-        position: relative;
-        float: inline-start;
-        width: 100%;
-        height: 100%;
-        margin: 20% auto;
-        padding: 20px;
-        max-width: 900px;
-      }
-      .ravintola-kuva {
-        float: left;
-        width: 30%;
-        margin-right: 40px;
-        margin-top: 10px;
-      }
-
-      p {
-        color: black;
-        margin-bottom: 10px;
-      }
-      #lause {
-        font-size: 40px;
-        margin-bottom: 10px;
-      }
-      #teksti {
-        font-size: 25px;
-        margin-bottom: 10px;
-      }
-
-      footer {
-        background-color: #970606;
-        padding: 20px;
-        text-align: center;
-        color: white;
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-      }
-    </style>
+    <link rel="stylesheet" href="nettisivu.css" />
+    <script src="Nettisivu.js" defer></script>
+    <script
+      src="https://kit.fontawesome.com/7b630d683f.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <nav>
       <ul>
         <li><h1>Lounari.</h1></li>
-        <li><a href="x">Etusivu</a></li>
+        <li><a href="Nettisivu.html">Etusivu</a></li>
         <li><a href="x">Ruokalistat</a></li>
         <li><a href="x">Yhteystiedot</a></li>
+        <li>
+          <a><i id="Kuva" class="fas fa-sign-in-alt" aria-hidden="true"></i></a>
+        </li>
       </ul>
     </nav>
+    <div class="container">
+      <h2 id="form-title">Log In</h2>
+      <div id="Login" class="form-container active">
+        <form>
+          <label for="login_username"></label>
+          <input
+            type="text"
+            id="login_username"
+            name="username"
+            placeholder="Username"
+            minlength="3"
+            required
+          />
+          <label for="login_password"></label>
+          <input
+            type="password"
+            id="login_password"
+            name="password"
+            placeholder="Password"
+            minlength="8"
+            required
+          />
+          <button id="button" type="submit">Log In</button>
+        </form>
+      </div>
+      <div id="register-form" class="form-container">
+        <form action="/submit_registration" method="post">
+          <label for="register_username"></label>
+          <input
+            type="text"
+            id="register_username"
+            name="username"
+            placeholder="Username"
+            minlength="3"
+            required
+          />
+          <label for="register_email"></label>
+          <input
+            type="email"
+            id="register_email"
+            name="email"
+            placeholder="Email"
+            pattern=".+@Metropolia.fi"
+            required
+          />
+          <label for="register_password"></label>
+          <input
+            type="password"
+            id="register_password"
+            name="password"
+            placeholder="Password"
+            minlength="8"
+            required
+          />
+          <label for="confirm_password"></label>
+          <input
+            type="password"
+            id="confirm_password"
+            name="confirm_password"
+            placeholder="Confirm Password"
+            minlength="8"
+            required
+          />
+          <button type="submit">Sing Up</button>
+        </form>
+      </div>
+      <button id="switch-btn" class="switch-btn">
+        Don't have an account? Sign up now
+      </button>
+      <i id="Logo" class="fas fa-times">Close</i>
+    </div>
+
     <main class="home">
       <div>
         <p>Tänne lisää sisältöä seuraavina vilkkoina</p>

@@ -1,0 +1,183 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --main-bg-color: #fb3812;
+  --main-border-color: #000000;
+  --active-bg: #181818;
+  --retro-black: rgb(23, 37, 33);
+  --gold-metallic: rgba(218, 165, 32, 1);
+  --light-orange: rgb(251, 140, 0);
+  --light-grey: rgb(202, 202, 202);
+  --icon-color: #9d9d9d;
+  --txt-color: rgb(20, 24, 22);
+  --dark-color: rgb(0, 0, 0);
+  --grey-color: rgb(155, 161, 181);
+  --white: #ffffff;
+  --loading: #202020;
+}
+body {
+  font-family: Arial, sans-serif;
+  background-image: url("ruoka.jpg");
+}
+nav {
+  background-color: black;
+  height: 70px;
+  padding: 10px 25px;
+}
+nav ul {
+  list-style: none;
+  margin: 10px;
+}
+nav ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+nav h1 {
+  color: gold;
+}
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+img {
+  width: 100%;
+}
+#porkkana_kuva {
+  width: 150px;
+  height: 100%;
+  position: absolute;
+  bottom: 35%;
+  right: 0;
+}
+.home {
+  margin: 40px auto 20px auto;
+  padding: 20px;
+  max-width: 900px;
+}
+.home {
+  font-size: large;
+  width: auto;
+}
+.info {
+  background-image: url("ruoka.jpg");
+  position: relative;
+  float: inline-start;
+  width: 100%;
+  height: 100%;
+  margin: 20% auto;
+  padding: 20px;
+  max-width: 900px;
+}
+.ravintola-kuva {
+  float: left;
+  width: 30%;
+  margin-right: 40px;
+  margin-top: 10px;
+}
+
+p {
+  color: black;
+  margin-bottom: 10px;
+}
+#lause {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+#teksti {
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+#Kuva {
+  width: 50px;
+  position: absolute;
+  top: 25px;
+  right: 0;
+  cursor: pointer;
+}
+
+footer {
+  background-color: #970606;
+  padding: 20px;
+  text-align: center;
+  color: white;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+.container {
+  display: none;
+}
+label {
+  display: block;
+  text-align: right;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+input {
+  width: 90%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  text-align: center;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #218838;
+}
+
+.container {
+  width: 500px;
+  margin: 100px auto;
+  padding: 80px;
+  border-radius: 50px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  line-height: 3.5;
+}
+
+.form-container {
+  display: none;
+}
+
+.form-container.active {
+  display: block;
+}
+
+.switch-btn {
+  margin: 10px 0;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+h2 {
+  color: #100f0f;
+  border-radius: 5px;
+  width: 100%;
+}
+.switch-btn:hover {
+  background-color: #0056b3;
+}
+#Logo {
+  width: 200px;
+}
