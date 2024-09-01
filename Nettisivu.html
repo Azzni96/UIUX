@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Market pages</title>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Market Pages</title>
     <link rel="stylesheet" href="nettisivu.css" />
     <script src="Nettisivu.js" defer></script>
     <script
@@ -15,8 +16,8 @@
       <ul>
         <li><h1>Lounari.</h1></li>
         <li><a href="Nettisivu.html">Etusivu</a></li>
-        <li><a href="x">Ruokalistat</a></li>
-        <li><a href="x">Yhteystiedot</a></li>
+        <li><a href="#">Ruokalistat</a></li>
+        <li><a href="#">Yhteystiedot</a></li>
         <li>
           <a><i id="Kuva" class="fas fa-sign-in-alt" aria-hidden="true"></i></a>
         </li>
@@ -25,8 +26,8 @@
     <div class="container">
       <h2 id="form-title">Log In</h2>
       <div id="Login" class="form-container active">
-        <form>
-          <label for="login_username"></label>
+        <form id="login-form">
+          <label for="login_username">Username</label>
           <input
             type="text"
             id="login_username"
@@ -35,7 +36,7 @@
             minlength="3"
             required
           />
-          <label for="login_password"></label>
+          <label for="login_password">Password</label>
           <input
             type="password"
             id="login_password"
@@ -48,8 +49,12 @@
         </form>
       </div>
       <div id="register-form" class="form-container">
-        <form action="/submit_registration" method="post">
-          <label for="register_username"></label>
+        <form
+          id="register-form-content"
+          action="/submit_registration"
+          method="post"
+        >
+          <label for="register_username">Username</label>
           <input
             type="text"
             id="register_username"
@@ -58,7 +63,7 @@
             minlength="3"
             required
           />
-          <label for="register_email"></label>
+          <label for="register_email">Email</label>
           <input
             type="email"
             id="register_email"
@@ -67,7 +72,7 @@
             pattern=".+@Metropolia.fi"
             required
           />
-          <label for="register_password"></label>
+          <label for="register_password">Password</label>
           <input
             type="password"
             id="register_password"
@@ -76,7 +81,7 @@
             minlength="8"
             required
           />
-          <label for="confirm_password"></label>
+          <label for="confirm_password">Confirm Password</label>
           <input
             type="password"
             id="confirm_password"
@@ -85,7 +90,7 @@
             minlength="8"
             required
           />
-          <button type="submit">Sing Up</button>
+          <button type="submit">Sign Up</button>
         </form>
       </div>
       <button id="switch-btn" class="switch-btn">

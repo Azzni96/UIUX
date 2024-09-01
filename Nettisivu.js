@@ -1,12 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Hae tarvittavat elementit
   const Kuva = document.getElementById("Kuva");
   const Logo = document.getElementById("Logo");
   const container = document.querySelector(".container");
   const otherSections = document.querySelectorAll(".info");
   const mainElement = document.querySelector("main");
 
-  // Näytä tai piilota container ja muokkaa taustakuvaa
   Kuva.onclick = function () {
     if (container.style.display === "none" || container.style.display === "") {
       container.style.display = "block";
@@ -16,15 +14,12 @@ document.addEventListener("DOMContentLoaded", () => {
       Kuva.style.display = "none";
     } else {
       container.style.display = "block";
-      document.body.style.backgroundImage = "none";
-      mainElement.style.display = "none";
-
       document.body.style.backgroundImage = "url('ruoka.jpg')";
+      mainElement.style.display = "none";
       otherSections.forEach((element) => (element.style.display = "block"));
     }
   };
 
-  // Sulje container
   Logo.onclick = function () {
     if (container.style.display === "block" || container.style.display === "") {
       container.style.display = "none";
@@ -36,12 +31,10 @@ document.addEventListener("DOMContentLoaded", () => {
       container.style.display = "block";
       document.body.style.backgroundImage = "none";
       mainElement.style.display = "none";
-      document.body.style.backgroundImage = "url('ruoka.jpg')";
       otherSections.forEach((element) => (element.style.display = "block"));
     }
   };
 
-  // Vaihda kirjautumis- ja rekisteröitymislomakkeiden välillä
   const switchBtn = document.getElementById("switch-btn");
   const loginForm = document.getElementById("Login");
   const registerForm = document.getElementById("register-form");
@@ -59,6 +52,39 @@ document.addEventListener("DOMContentLoaded", () => {
       formTitle.textContent = "Sign Up";
       switchBtn.textContent = "Already have an account? Log in";
       loginForm.classList.remove("active");
+    }
+  });
+  // Password confirmation validation
+  const registerFormContent = document.getElementById("register-form-content");
+  const passwordInput = document.getElementById("register_password");
+  const confirmPasswordInput = document.getElementById("confirm_password");
+  const errorMsg = document.getElementById("password-error");
+
+  // Function to validate passwords
+  function validatePasswords() {
+    const password = passwordInput.value;
+    const confirmPassword = confirmPasswordInput.value;
+
+    if (password !== confirmPassword) {
+      confirmPasswordInput.setCustomValidity("Passwords do not match.");
+      errorMsg.style.display = "block";
+    } else {
+      confirmPasswordInput.setCustomValidity("");
+      errorMsg.style.display = "none";
+    }
+  }
+
+  // Add event listeners for real-time validation
+  passwordInput.addEventListener("input", validatePasswords);
+  confirmPasswordInput.addEventListener("input", validatePasswords);
+
+  // Validate on form submit
+  registerFormContent.addEventListener("submit", function (event) {
+    if (confirmPasswordInput.value !== passwordInput.value) {
+      event.preventDefault(); // Prevent form submission
+      errorMsg.style.display = "block";
+    } else {
+      errorMsg.style.display = "none";
     }
   });
 });
