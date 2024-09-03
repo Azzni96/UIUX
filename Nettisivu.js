@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const Logo = document.getElementById("Logo");
   const container = document.querySelector(".container");
   const otherSections = document.querySelectorAll(".info");
-  const mainElement = document.querySelector("main");
+  const mainElement = document.querySelector("section");
 
   Kuva.onclick = function () {
     if (container.style.display === "none" || container.style.display === "") {
